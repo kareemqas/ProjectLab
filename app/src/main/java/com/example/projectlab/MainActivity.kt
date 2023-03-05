@@ -26,24 +26,21 @@ class MainActivity : AppCompatActivity() {
 
 
         save.setOnClickListener {
-//            var txt_name: String = name.text.toString()
-//            var txt_addres = addres.text.toString()
-//            var txt_phone = phone.text.toString()
-//            val users: HashMap<String, Any> = HashMap()
-//            users["name"] = txt_name
-//            users["phone"] = txt_phone
-//            users["addres"] = txt_addres
-//            db.collection("users")
-//                .add(users)
-//                .addOnSuccessListener { documentReference ->
-//
-//                 /// mesage data was added ...
-////
-//
-//                }
-//                .addOnFailureListener { e ->
-//                    Log.w(TAG, "Error adding document", e)
-//                }
+            var txt_name: String = name.text.toString()
+            var txt_addres = addres.text.toString()
+            var txt_phone = phone.text.toString()
+            val users: HashMap<String, Any> = HashMap()
+            users["name"] = txt_name
+            users["phone"] = txt_phone
+            users["addres"] = txt_addres
+            db.collection("users")
+                .add(users)
+                .addOnSuccessListener { documentReference ->
+
+                }
+                .addOnFailureListener { e ->
+                    Log.w(TAG, "Error adding document", e)
+                }
 
 // save code
             var intent = Intent(this, MainActivity2::class.java);
